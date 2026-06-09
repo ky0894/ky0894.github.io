@@ -12,13 +12,27 @@
   background-position: center;
   height: 100vh;
   opacity: 0;
-  transform: translateY(70px);
   animation: foto 3s ease-out forwards;
 }
 
 @keyframes foto {
     to {
         opacity: 1;
-        transform: translateY(0);
+
     }
 }
+
+.img{
+  width: 350px;
+}
+
+.name{
+  font-size: 5px;
+}
+
+.about{
+  font-size: 50px;
+}
+
+
+
