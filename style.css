@@ -62,3 +62,29 @@
     opacity: 1;       
 }
 
+.hover-box {
+  position: relative;
+  display: inline-block;
+}
+
+.popup {
+  position: absolute;
+  top: 0;          
+  left: 100%;    
+  transform: translateY(-100%); 
+  
+  background: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+}
+
+.hover-box:hover .popup {
+  opacity: 1;
+  pointer-events: auto;
+}
