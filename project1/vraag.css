@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.giveup{
+    width: 200px;
+    height: 100px ;
+    border: 3px solid black;
+    background-color:rgb(5, 5, 143); 
+    text-align: center;
+    justify-content: center;
+    color: white;
+    display: flex;
+    padding: 30px 30px;
+
+}
+
+.header{
+    width: 300px;
+    height: 100px;
+    border: 3px solid black;
+    background-color: rgb(50, 50, 172); 
+    display: flex;
+
+}
+
+.vraag{
+    width: 536px;
+    height: 100px;
+    border: 3px solid black;
+    background-color:rgb(5, 5, 143); 
+    text-align: center  ;
+    justify-content: center;
+    color: white;
+    display: flex;
+    padding: 30px 30px;
+}
+
+.header2{
+    width: 300px;
+    border: 3px solid black;
+    height: 100px;
+    background-color: rgb(50, 50, 172); 
+display: flex;
+}
+
+.ding50{
+    width: 200px;
+    border: 3px solid black;
+    height: 100px;
+    background-color: rgb(5, 5, 143); 
+    text-align: center;
+    justify-content: center;
+    color: white;   
+    display: flex;
+    padding: 20px 30px;
+}
+
+.ding50:hover {
+    background-color: #006ec8;
+}
+
+.giveup:hover {
+    background-color: #006ec8;
+}
+
+.vraagTitel{
+
+  width: 600px;
+  height: 150px;
+  border: 3px solid black;
+  background-color: lightblue;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px 20px;
+}
+
+.antwoordA{
+    width: 300px;
+    height: 75px;
+      border: 3px solid black;
+  background-color: lightblue;
+  margin: 50px 300px;
+  text-align: center;
+  padding: 20px 20px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+}
+.antwoordB{
+    width: 300px;
+    height: 75px;
+      border: 3px solid black;
+  background-color: lightblue;
+  margin: 50px 50px;
+  text-align: center;
+  padding: 20px 20px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.antwoordC{
+    width: 300px;
+    height: 75px;
+      border: 3px solid black;
+  background-color: lightblue;
+  margin: 50px 300px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px 20px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.antwoordD{
+    width: 300px;
+    height: 75px;
+      border: 3px solid black;
+  background-color: lightblue;
+  margin: 50px 50px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px 20px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.antwoordA:hover {
+    transform: scale(1.1);
+}
+
+.antwoordA.clicked {
+    animation: clickZoom 0.3s ease;
+}
+
+.antwoordB:hover {
+    transform: scale(1.1);
+}
+
+.antwoordB.clicked {
+    animation: clickZoom 0.3s ease;
+}
+
+.antwoordC:hover {
+    transform: scale(1.1);
+}
+
+.antwoordC.clicked {
+    animation: clickZoom 0.3s ease;
+}
+
+.antwoordD:hover {
+    transform: scale(1.1);
+}
+
+.antwoordD.clicked {
+    animation: clickZoom 0.3s ease;
+}
+
+@keyframes clickZoom {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;    
+}
+
+.row2 {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  height: 100px;
+}
+
+
+.row3{
+    display: flex;
+    gap: 1px;
+    flex-wrap: wrap;   
+}
+
+.row4{
+display: flex;
+flex-wrap: nowrap;   
+height: 50px;
+}
+
+.score{
+    width: 200px;
+    height: 50px ;
+    border: 3px solid black;
+    background-color: rgb(50, 50, 172); 
+    text-align: center;
+    justify-content: center;
+    color: white;
+    margin: 55px 0px;
+    padding: 10px 10px;
+}
+.footer{
+   width: 1136px;
+   height: 50px;
+   border: 3px solid black;
+   margin: 55px 0px;
+   background-color: rgb(5, 5, 143);
+   display: flex;
+}
+.naam{
+    width: 200px;
+    height: 50px ;
+    border: 3px solid black;
+    background-color: rgb(50, 50, 172); 
+    text-align: center;
+    justify-content: center;
+    color: white;
+    margin: 55px 0px;
+    padding: 10px 10px;
+}
+body{
+  background-color: rgb(195, 235, 254);
+}
+a{
+  text-decoration: none;
+}
+
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    z-index: 1000;
+    text-align: center;
+  }
+
+  .modal.correct { border-color: green; }
+  .modal.wrong { border-color: red; }
+
+  .modal h3 { margin-top: 0; }
+  .modal button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+      .vraagTitel {
+      font-size: 30px;
+      color: #333;
+      font-family: Arial, sans-serif;
+    }

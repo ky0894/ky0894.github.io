@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="vraag.css">
+  <title>Vraag 2</title>
+</head>
+<body>
+  <div class="row2">
+    <a href="quiz.html"><div class="giveup"><h2>GIVE UP</h2></div></a>
+<button id="klaarBtn"></button>
+    <div class="header"></div>
+    <div class="vraag"><h1>Vraag 2/20</h1></div>
+    <div class="header2"></div>
+    <button class="ding50" id="eliminateBtn"><h2>50/50<br>2/2</h2></button>
+  </div>
+
+  <div class="vraagTitel"></div>
+
+  <div class="row">
+    <div id="myBoxA" class="antwoordA" data-answer="false"></div>
+    <div id="myBoxB" class="antwoordB" data-answer="true"></div>
+  </div>
+
+  <div class="row3">
+    <div id="myBoxC" class="antwoordC" data-answer="false"></div>
+    <div id="myBoxD" class="antwoordD" data-answer="false"></div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="modal" id="modal">
+    <h3 id="modalTitle"></h3>
+    <p id="modalContent"></p>
+    <a href="vraag3.html"><button onclick="closeModal()">sluit</button></a>
+  </div>
+
+  <div class="row4">
+    <div id="scoreDisplay" class="score">score:0</div>
+    <div class="footer"></div>
+    <div id="usernameDisplay" class="naam"></div>
+  </div>
+
+  <script src="vraag.js" defer></script>
+  <script>localStorage.setItem("currentquestion", 1);
+window.reload = function() {
+      const name = localStorage.getItem("username");
+      if (name) {
+        document.getElementById("usernameDisplay").textContent =name;
+      } else {
+        document.getElementById("usernameDisplay").textContent = "(noname)";
+      }
+
+      document.querySelectorAll('.antwoord').forEach(box => {
+    box.classList.remove("eliminated");
+    box.style.backgroundColor = "";
+    box.style.pointerEvents = "auto";
+    box.style.opacity = "1";
+  });};
+
+  
+  const name = localStorage.getItem("username");
+  document.getElementById("usernameDisplay").textContent = name || "(noname)";
+     </script>
+</body>
+</html>

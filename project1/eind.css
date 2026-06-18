@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    height: 75px;
+    border: 3px solid black;
+    background-color: rgb(5, 5, 143);
+}
+body{
+  background-color: rgb(195, 235, 254);
+}
+.footer{
+   width: 100%;
+   height: 50px;
+   border: 3px solid black;
+   margin: 0px 0px;
+   background-color:rgb(50, 50, 172);
+   display: flex;
+}
+.eind{
+
+  width: 400px;
+  height: 350px;
+  border: 3px solid black;
+  background-color: lightblue;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px 20px;
+}
+
+.try{
+    width: 300px;
+    height: 75px;
+      border: 3px solid black;
+  background-color: lightblue;
+  margin: 88px auto;
+  text-align: center;
+  padding: 20px 20px;
+}
+.row{
+display: flex;
+flex-wrap: nowrap;   
+height: 50px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+  .lolbox {
+    display: none;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    z-index: 1000;
+    text-align: center;
+  }
+
+    .okbox {
+    display: none;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    z-index: 1000;
+    text-align: center;
+  }
+
+    .goodbox {
+    display: none;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    z-index: 1000;
+    text-align: center;
+  }
+
+    .perfectbox {
+    display: none;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    z-index: 1000;
+    text-align: center;
+  }
+
+    .whatBox {
+    display: none;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    z-index: 1000;
+    text-align: center;
+  }

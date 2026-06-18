@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="eind.css" />
+  <title>Eind</title>
+</head>
+<body>
+  <div class="header"></div>
+  <div id="eindS" class="eind">
+    <img src="https://media.tenor.com/lCfnlD4SppUAAAAM/agnes-tachyon-umamusume.gif" width="350" height="300" alt="foto" />
+  </div>
+  <a href="quiz.html"><div class="try"><h2>Home</h2></div></a>
+
+<div id="perfect" class="perfectbox">
+  Perfect!<br>
+  <img src="https://i.redd.it/e4yh40fs73mf1.gif" alt="foto1" height="100" width="100">
+  <div class="scoreText"></div>
+  <br><br>
+  <button class="closeBtn" onclick="closeBox('perfect')">Sluiten</button>
+</div>
+
+<div id="good" class="goodbox">
+  Goed gedaan!<br>
+ <img src="https://preview.redd.it/daiwa-scarlet-weighs-in-v0-wldld17h4qbf1.png?width=1080&auto=webp&s=a73779394b3a8c8ee7c06870f1b12c066b066e73" alt="foto2" height="100" width="100">
+  <div class="scoreText"></div>
+  <br><br>
+  <button class="closeBtn" onclick="closeBox('good')">Sluiten</button>
+</div>
+
+<div id="ok" class="okbox">
+  OK...<br>
+  <img src="https://i.redd.it/rp7ippshhwrf1.jpeg" alt="foto3" height="100" width="100">
+  <div class="scoreText"></div>
+  <br><br>
+  <button class="closeBtn" onclick="closeBox('ok')">Sluiten</button>
+</div>
+
+<div id="lol" class="lolbox">
+  Helaas...<br>
+  <img src="https://i.redd.it/5q77qb9wczqf1.jpeg" alt="foto3" height="100" width="100">   
+  <div class="scoreText"></div>
+  <br><br>
+  <button class="closeBtn" onclick="closeBox('lol')">Sluiten</button>
+</div>
+<div id="what" class="whatBox">
+  Bro....you used bug...<br>
+  <img src="https://preview.redd.it/the-golshi-faces-from-this-event-are-amazing-v0-ysjk46a5tsqf1.jpeg?width=605&auto=webp&s=07d0042d78434fcea25c8a1eeece76fd6254135c" alt="foto3" height="100" width="100">
+  <div class="scoreText"></div>
+  <br><br>
+  <button class="closeBtn" onclick="closeBox('what')">Sluiten</button>
+</div>
+
+  <div onclick="resetall()" class="row"><div class="footer"></div></div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const finished = localStorage.getItem('quizFinished');
+      const score = parseInt(localStorage.getItem('score')) || 0;
+
+      if (finished !== 'true') {
+        return;
+      }
+
+      const perfectBox = document.getElementById('perfect');
+      const goodBox = document.getElementById('good');
+      const okBox = document.getElementById('ok');
+      const lolBox = document.getElementById('lol');
+      const whatBox = document.getElementById('what');
+
+      [perfectBox, goodBox, okBox, lolBox].forEach(box => {
+        if (box) box.style.display = 'none';
+      });
+
+      if (score >= 20 && whatBox) {
+        whatBox.style.display = 'block';
+      }else if (score >= 18 && perfectBox) {
+        perfectBox.style.display = 'block';
+      } else if (score >= 12 && goodBox) {
+        goodBox.style.display = 'block';
+      } else if (score >= 5 && okBox) {
+        okBox.style.display = 'block';
+      } else if (lolBox) {
+        lolBox.style.display = 'block';
+      }
+      localStorage.removeItem('quizFinished');
+    });
+  </script>
+  <script>
+  function closeBox(id) {
+    const box = document.getElementById(id);
+    if (box) {
+      box.style.display = 'none';
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const score = parseInt(localStorage.getItem("score")) || 0;
+
+  const scoreDisplay = document.getElementById("scoreDisplay");
+  if (scoreDisplay) {
+    scoreDisplay.textContent = "score: " + score;
+  }
+
+  document.querySelectorAll(".scoreText").forEach(el => {
+    el.textContent = "Je score is: " + score;
+  });
+});
+</script>
+</body>
+</html>

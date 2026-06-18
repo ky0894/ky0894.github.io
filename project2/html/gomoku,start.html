@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gomoku</title>
+    <link rel="stylesheet" href="../css/gomoku.css">
+</head>
+  <style>
+    body {
+      background-image: url('../foto/24808.png'); 
+      background-size: cover; 
+      background-repeat: no-repeat; 
+      background-attachment: fixed; 
+      background-color: rgb(121, 81, 0);
+    }
+  </style>
+
+<body>
+      <header></header>
+  <div class="row">
+<div class="title">Gomoku</div>
+    <div class="spelregel"><a href="gomoku,regel.html"><h3>spel regel</h3></a></div>
+  </div>
+
+    <a href="gomoku.html"><div class="start">Start</div></a>
+
+<form>
+    <label>Player 1 Name:</label>
+    <input type="text" id="player1"><br><br>
+
+    <label>Player 2 Name:</label>
+    <input type="text" id="player2"><br><br>
+
+    
+    <button onclick="saveNames()">Save</button>
+
+</form>
+<footer></footer>
+</body>
+<script src="../js/game.js"></script>
+<script src="../js/name.js"></script>
+<script src="../js/view.js"></script>
+</html>
